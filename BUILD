@@ -1,5 +1,5 @@
-genrule(
-  name = "hello",
-  outs = ["hello_world.txt"],
-  cmd = "echo Hello World > $@",
+java_binary(
+    name = "my-runner",
+    srcs = glob(["**/*.java"]),
+    main_class = "com.example.ProjectRunner",
 )
